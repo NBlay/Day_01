@@ -1,13 +1,10 @@
-array = [1, 2 , 4, 5, 9];
-
-function tabTriCarre(array){
-    multipliedArr = [];
-    array.forEach(element =>{
-        multipliedArr.push(element*element)
-    })
-    multipliedArr.sort((a,b) =>a-b)
-    return multipliedArr
-}
+function tabTriCarre(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+      result[i] = array[i] ** 2;
+    }
+    return result.sort(function(a, b) {return a - b;})
+  }
 
 // Merci de ne pas effacer la ligne en dessous.
 exports.tabTriCarre =  tabTriCarre;
