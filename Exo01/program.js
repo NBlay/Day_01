@@ -1,12 +1,12 @@
-function firstDuplicateValue(array) {
-    for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            if (array[i] == array[j] && i != j) {
-                return array[i]
-            }
-        }
+function firstDuplicateValue(array){
+    let ref = {};
+for (let i = 0; i < array.length; i++) {
+    if (array[i] in ref){
+        return array[i];
     }
-    return -1
+    ref[array[i]] = i;
+}
+     return -1;
 }
 
 exports.firstDuplicateValue =  firstDuplicateValue;
