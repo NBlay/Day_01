@@ -1,10 +1,10 @@
-function firstDuplicateValue(array){
-    let number=[];
+function firstDuplicateValue(array) {
     for (let i = 0; i < array.length; i++) {
-        if (number.indexOf(array[i]) !== -1) {
-            return (array[i]);
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j] && i != j) {
+                return array[i]
+            }
         }
-        number.push(array[i]);
     }
     return -1
 }
